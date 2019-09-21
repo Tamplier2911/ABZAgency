@@ -1,0 +1,130 @@
+@import "../index.scss";
+
+.sidenav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000004d;
+  z-index: 50;
+  display: none;
+
+  &__container {
+    background-color: #fff;
+    max-width: 28rem;
+    height: 100vh;
+    padding: 4rem;
+    animation: slidein 0.6s;
+    box-shadow: 0 4rem 2rem #0000004d;
+
+    @media only screen and (max-width: $bp-tablet) {
+      @keyframes slidein {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 28rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $bp-phone-pre) {
+      @keyframes slidein {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 28rem;
+        }
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    animation: fadein 1s;
+
+    &--image-ct {
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: $bp-phone-pre-3) {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+    &--image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    &--name {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-phone-pre-3) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--email {
+      font-size: 1.4rem;
+      color: #868686;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 0.1rem;
+      background-color: #868686;
+      top: 2rem;
+    }
+  }
+
+  &__navigation {
+    list-style-type: none;
+    animation: fadein 1s;
+    &--li {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &--link {
+      text-decoration: none;
+      transition: color 0.2s;
+      &:link,
+      &:visited {
+        font-size: 1.8rem;
+        color: #333;
+        @media only screen and (max-width: $bp-phone-pre-3) {
+          font-size: 1.7rem;
+        }
+      }
+
+      &:hover,
+      &:active {
+        color: #ef6c00;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

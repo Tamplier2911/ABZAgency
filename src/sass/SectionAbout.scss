@@ -1,0 +1,462 @@
+@import "../index.scss";
+.section-about {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-row-gap: 8rem;
+
+  padding: 14rem 0 10rem 0;
+
+  @media only screen and (max-width: $bp-tablet) {
+    padding: 12rem 0 10.1rem 0;
+    grid-row-gap: 11.15rem;
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-2) {
+    grid-row-gap: 5rem;
+    padding: 10rem 0 8rem 0;
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-3) {
+    padding: 5.7rem 0 8rem 0;
+  }
+
+  @media only screen and (max-width: $bp-phone) {
+    padding: 7.4rem 0 7.7rem 0;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 10rem;
+
+    @media only screen and (max-width: $bp-desktop) {
+      grid-column-gap: 6.8rem;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+      grid-template-columns: repeat(5, 1fr);
+      position: relative;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--header1 {
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 4.2rem;
+      line-height: 5.1rem;
+
+      grid-column: 1 / -1;
+      text-align: center;
+      position: relative;
+      top: -0.4rem;
+      left: -1.3rem;
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        left: -0.45rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        left: -0.3rem;
+        top: -0.6rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        left: -0.1rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-3) {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+        margin-bottom: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        left: 0;
+      }
+    }
+
+    &--svg {
+      grid-column: 1 / 2;
+
+      position: relative;
+      top: 0.2rem;
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        left: 5rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        margin-left: none;
+        top: -2.3rem;
+        left: -0.2rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        grid-column: 1 / 3;
+        position: absolute;
+
+        height: 21.5rem;
+        top: 8.84rem;
+        left: -3.5rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre) {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--content {
+      grid-column: 2 / 3;
+      display: grid;
+      justify-items: start;
+      grid-auto-rows: min-content;
+      grid-row-gap: 0.6rem;
+      width: 102%;
+
+      position: relative;
+      top: -0.1rem;
+      left: -3.6rem;
+      letter-spacing: 0.003rem; // god damn you pixel-purrfect...
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        left: 1.5rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        width: 110%;
+        top: -0.3rem;
+        left: -4.1rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        grid-column: 3 / -1;
+        width: 115%;
+        left: -6.5rem;
+        top: -0.1rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre) {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &--header2 {
+      position: relative;
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+
+      @media only screen and (max-width: $bp-tablet) {
+        top: -0.4rem;
+        left: -0.12rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre) {
+        position: static;
+        margin-bottom: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        width: 80%;
+        position: relative;
+        left: 2.9rem;
+        top: 0.8rem;
+      }
+    }
+
+    &--p {
+      color: #6d6d6d;
+    }
+
+    &--p-1 {
+      margin-bottom: 1.6rem;
+    }
+
+    &--p-2 {
+      margin-bottom: 0.5rem;
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        width: 76rem;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        margin-top: 0.6rem;
+      }
+    }
+
+    &--link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        transition: color 0.2s, transform 0.2s;
+        color: $cl-prime;
+        font-weight: 600;
+        font-size: 2.1rem;
+        letter-spacing: 0.05rem;
+        position: relative;
+        left: 0.16rem;
+      }
+
+      &:hover,
+      &:active {
+        color: #ff953d;
+      }
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        margin-top: 0.02rem;
+        left: 0.4rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        margin-top: 0.8rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        margin-top: 0.9rem;
+        margin-left: -0.05rem;
+      }
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-row-gap: 4rem;
+
+    @media only screen and (max-width: $bp-tablet) {
+    }
+
+    &--header1 {
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 4.2rem;
+      line-height: 5.1rem;
+
+      grid-column: 1 / -1;
+      width: 52%;
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      left: -1.2rem;
+      top: -0.2rem;
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        left: 0.05rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        margin-top: 2.3rem;
+        left: -0.3rem;
+        // width: 60%;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        width: 75%;
+        left: 0.04rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-3) {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-4) {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        top: 1.8rem;
+        margin-bottom: -0.4rem;
+      }
+    }
+
+    &--content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-column-gap: 0.35rem;
+
+      @media only screen and (max-width: $bp-desktop-big) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-column-gap: 2.5rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        grid-column-gap: 3.1rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-2) {
+        // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      }
+    }
+
+    &--figure {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media only screen and (min-width: $bp-desktop-big) {
+        left: 1.3rem;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        left: -0.5rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: min-content;
+        grid-column-gap: 3.1rem;
+        margin: 0 6.1rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-2) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    &--figure:not(:last-child) {
+      margin-bottom: 4rem;
+
+      @media only screen and (max-width: $bp-tablet) {
+        margin-bottom: 2.48rem;
+      }
+    }
+
+    &--svg {
+      margin-bottom: 2.5rem;
+      position: relative;
+
+      @media only screen and (max-width: $bp-desktop) {
+        left: -0.05rem;
+        top: 0.2rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        height: 10rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-2) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        margin: 0.7rem;
+        left: 0.6rem;
+        top: 0.4rem;
+      }
+    }
+
+    &--heading2 {
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+
+      margin-bottom: 0.7rem;
+
+      @media only screen and (max-width: $bp-tablet) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin-top: -0.2rem;
+        margin-left: -0.08rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-2) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        position: relative;
+        top: 1rem;
+        left: 0.5rem;
+      }
+    }
+
+    &--p {
+      position: relative;
+      left: 0.2rem;
+
+      @media only screen and (max-width: $bp-desktop) {
+        left: 0.33rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        top: -1.2rem;
+        left: -0.01rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre) {
+        position: static;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-2) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+      }
+
+      &-auxiliary1 {
+        @media only screen and (max-width: $bp-tablet) {
+          top: -2.4rem;
+        }
+      }
+      /*
+      &-auxiliary2 {
+        
+      }*/
+      &-auxiliary3 {
+        @media only screen and (max-width: $bp-tablet) {
+          left: 0.1rem;
+          top: -1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.br-large-1 {
+  display: none;
+}

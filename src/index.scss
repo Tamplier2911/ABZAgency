@@ -1,0 +1,280 @@
+// COLOR PALET
+$cl-prime: #ef6c00;
+$cl-second: #283593;
+$cl-white: #fff;
+$cl-font: #393939;
+
+// BREAKPOINTS
+
+$bp-desktop-big: 90em;
+$bp-desktop: 65.6em;
+$bp-tablet-big: 58.125em;
+$bp-mockup: 63.9em;
+$bp-tablet: 48em;
+$bp-phone-pre: 40em;
+$bp-phone-pre-2: 35.62em;
+$bp-phone-pre-3: 30em;
+$bp-phone-pre-4: 22.5rem;
+$bp-phone: 20em;
+
+// 1440px / 16 = 90em;
+// 1050px / 16 = 65.6em;
+// 1024px / 16 = 64em;
+// 930px / 16 = 58.125em;
+// 768px / 16 = 48em;
+// 640px / 16 = 40em;
+// 570px / 16 - 35.62em;
+// 480px / 16 = 30em;
+// 360px / 16 = 22.5em;
+// 320px / 16 = 20em;
+// BR'S MANAGEMENT
+
+// TYPOGRAPHY
+$font-heading: "Overpass", sans-serif;
+$font-regular: "Source Sans Pro", sans-serif;
+
+// desktop
+.h1-d {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+// desktop tablet
+.h2-dt {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 4.2rem;
+  line-height: 5.1rem;
+}
+
+// desktop tablet
+.h3-dt {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 3.1rem;
+}
+
+// desktop tablet mobile
+.h4-dtm {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+}
+
+// desktop tablet
+.h5-dt {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+// tablet
+.h1-t {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 4.2rem;
+  line-height: 5.1rem;
+}
+
+// mobile
+.h1-m {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+
+// mobile
+.h2-m {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 3.1rem;
+}
+
+// mobile
+.h3-m {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+}
+
+// mobile
+.h5-m {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.p-1 {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+.p-2 {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.p-3 {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+// BUTTONS
+
+.btn {
+  cursor: pointer;
+  font-family: $font-regular;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: none;
+  font-size: 1.85rem;
+  padding: 0.9rem 11.3rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.2s;
+
+  @media only screen and (max-width: $bp-phone-pre-3) {
+    padding: 0.9rem 10rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-primary {
+  color: $cl-white;
+  background-color: $cl-prime;
+
+  &:hover,
+  &:active {
+    background-color: #fc831f;
+  }
+}
+
+.btn-secondary {
+  color: $cl-prime;
+  background-color: $cl-white;
+  border: 0.2rem solid $cl-prime;
+  padding: 0.6rem 9.5rem;
+
+  @media only screen and (max-width: $bp-phone-pre-3) {
+    padding: 0.8rem 9.2rem;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #fee6d2;
+  }
+}
+
+.btn-disabled {
+  color: #8d8c8c;
+  background-color: #d7d7d7;
+}
+
+// LINK
+.link-active {
+  color: $cl-second;
+}
+
+//ICON
+
+.icon-disabled {
+  opacity: 0.2;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.2;
+  }
+}
+
+// SELETION
+
+::selection {
+  background-color: $cl-prime;
+  color: $cl-white;
+}
+
+// BASE
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 10 / 16 * 100 = 62.5% (10 px per rem);
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-regular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  // line-height: 1.6;
+  color: $cl-font;
+
+  min-width: 32rem;
+  max-width: 256rem;
+  margin: 0 auto;
+
+  &::-webkit-scrollbar {
+    // width: .6rem;
+    width: 1.7rem;
+    background-color: #2834930c;
+    // border-radius: 5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(
+      to bottom,
+      #ef6c00,
+      #283593
+    );
+    border-radius: 5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #0000004d;
+    box-shadow: inset 0 0 6px #0000004d;
+  }
+}
+
+// BR'S MANAGEMENT
+
+@media only screen and (min-width: $bp-desktop) {
+  .br-desk {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $bp-desktop-big) {
+  // if screen less than 1440 do that
+  .br-large {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $bp-mockup) {
+  .br-desk {
+    display: none;
+  }
+}

@@ -1,0 +1,287 @@
+@import "../index.scss";
+
+.section-requirements {
+  grid-column: full-start / full-end;
+  background-image: url("../images/third-block-bg/third-block-bg-2560x692-min.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 14rem 0 10rem 0;
+  color: $cl-white;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(0rem, 1fr)
+    [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, 9.75rem) [col-end]
+    )
+    [center-end]
+    minmax(0rem, 1fr) [full-end];
+  grid-row-gap: 2rem;
+  align-items: center;
+
+  @media only screen and (min-resolution: 81dpi) and (min-width: $bp-desktop-big) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-second, 0.8),
+        rgba($cl-prime, 0.2)
+      ),
+      url("../images/third-block-bg/third-block-bg-2560x692.jpg");
+  }
+
+  @media only screen and (max-width: $bp-desktop-big) {
+    grid-template-columns:
+      [full-start] minmax(5rem, 1fr)
+      [center-start] repeat(
+        12,
+        [col-start] minmax(min-content, 9.75rem) [col-end]
+      )
+      [center-end]
+      minmax(5rem, 1fr) [full-end];
+    background-image: url("../images/third-block-bg/third-block-bg-1024x755-min.jpg");
+    padding: 14rem 0 11.2rem 0;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (max-width: $bp-desktop-big) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-second, 0.8),
+        rgba($cl-prime, 0.2)
+      ),
+      url("../images/third-block-bg/third-block-bg-1024x755.jpg");
+  }
+
+  @media only screen and (max-width: $bp-desktop) {
+    padding: 14rem 0 9rem 0;
+  }
+
+  @media only screen and (max-width: $bp-desktop) {
+    padding: 14rem 0 11.2rem 0;
+  }
+
+  @media only screen and (max-width: $bp-tablet-big) {
+    grid-template-columns:
+      [full-start] minmax(5rem, 1fr)
+      [center-start] repeat(
+        20,
+        [col-start] minmax(min-content, 5.85rem) [col-end]
+      )
+      [center-end]
+      minmax(5rem, 1fr) [full-end];
+    background-image: url("../images/third-block-bg/third-block-bg-768x878-min.jpg");
+    position: relative;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (max-width: $bp-tablet-big) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-second, 0.8),
+        rgba($cl-prime, 0.2)
+      ),
+      url("../images/third-block-bg/third-block-bg-768x878.jpg");
+  }
+
+  @media only screen and (max-width: $bp-tablet) {
+    padding: 12rem 0 9.6rem 0;
+    grid-template-columns:
+      [full-start] minmax(2.5rem, 1fr)
+      [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 11.7rem) [col-end]
+      )
+      [center-end]
+      minmax(2.5rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-phone-pre) {
+    grid-template-columns:
+      [full-start] minmax(2.5rem, 1fr)
+      [center-start] 1fr [center-end]
+      minmax(2.5rem, 1fr) [full-end];
+    background-image: url("../images/third-block-bg/third-block-bg-320x1031-min.jpg");
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (max-width: $bp-phone-pre) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-second, 0.8),
+        rgba($cl-prime, 0.2)
+      ),
+      url("../images/third-block-bg/third-block-bg-320x1031.jpg");
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-2) {
+    padding: 8rem 0 7rem 0;
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-3) {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 2.5rem 7rem 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-phone) {
+    padding: 6.5rem 1.5rem 5.5rem 1.5rem;
+  }
+
+  &__header {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 4.2rem;
+    line-height: 5.1rem;
+
+    grid-column: center-start / center-end;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    top: -0.4rem;
+    left: -1.2rem;
+
+    @media only screen and (min-width: $bp-desktop-big) {
+      left: 0.1rem;
+    }
+
+    @media only screen and (max-width: $bp-desktop) {
+      margin-bottom: 3.5rem;
+      top: -0.6rem;
+      left: 0.05rem;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+      padding: 0 12rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre) {
+      position: static;
+      order: 2;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre-3) {
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__content {
+    grid-column: center-start / col-end 7;
+
+    display: grid;
+    grid-row-gap: 2.2rem;
+    color: #ffffffce;
+    position: relative;
+    top: -2.2rem;
+    left: 0.22rem;
+
+    @media only screen and (min-width: $bp-desktop-big) {
+      left: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-desktop) {
+      left: -0.2rem;
+      width: 102.5%;
+      letter-spacing: 0.0006rem; //ILU Pixel Purrfecto
+    }
+
+    @media only screen and (max-width: $bp-tablet-big) {
+      grid-column: center-start / col-end 10;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+      grid-column: center-start / col-end 4;
+      top: -2.4rem;
+      left: -0.1rem;
+      width: 102%;
+      z-index: 3;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre) {
+      grid-column: center-start / center-end;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      position: static;
+      order: 3;
+    }
+
+    &--p1,
+    &--p2,
+    &--p3 {
+      @media only screen and (max-width: $bp-phone-pre) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--p2 {
+      @media only screen and (max-width: $bp-phone) {
+        margin-top: 1.3rem;
+      }
+    }
+
+    &--p3 {
+      @media only screen and (max-width: $bp-phone) {
+        margin-top: 1.3rem;
+      }
+    }
+  }
+
+  &__svg {
+    grid-column: col-start 8 / center-end;
+    position: relative;
+    right: 3.3rem;
+    top: -0.1rem;
+
+    @media only screen and (min-width: $bp-desktop-big) {
+      left: -1.9rem;
+    }
+
+    @media only screen and (max-width: $bp-desktop-big) {
+      left: 6.1rem;
+      top: -2.4rem;
+    }
+
+    @media only screen and (max-width: $bp-tablet-big) {
+      height: 25rem;
+      grid-column: col-start 15 / center-end;
+      position: absolute;
+      top: 35rem;
+      left: -20rem;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+      height: 32rem;
+      position: relative;
+      top: -3.2rem;
+      left: -40.8rem;
+      z-index: 2;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre) {
+      grid-column: center-start / center-end;
+      height: 25rem;
+      position: static;
+      order: 2;
+      margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre-2) {
+      height: 20rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre-3) {
+      height: 15rem;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: $bp-phone) {
+      width: 100%;
+      height: 22rem;
+    }
+  }
+}

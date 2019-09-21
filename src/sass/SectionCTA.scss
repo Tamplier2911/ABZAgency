@@ -1,0 +1,236 @@
+@import "../index.scss";
+.SectionCTA {
+  grid-column: full-start / full-end;
+  background-image: url("../images/banner-bg/banner-bg-2560x676-min.jpg");
+  // background-image: url("../images/banner-bg/banner-bg-2560x676.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 14rem 0;
+  color: $cl-white;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(0rem, 1fr)
+    [center-start] repeat(
+      20,
+      [col-start] minmax(min-content, 5.85rem) [col-end]
+    )
+    [center-end]
+    minmax(0rem, 1fr) [full-end];
+  align-items: center;
+
+  // @media (min-resolution: 192dpi) {
+  //   background-image: url("../images/banner-bg/banner-bg-1204x723.jpg");
+  // }
+
+  // @media
+
+  @media only screen and (min-resolution: 81dpi) and (min-width: $bp-desktop-big) {
+    padding: 20.4rem 0 14.2rem 0;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-prime, 0.8),
+        rgba($cl-second, 0.1)
+      ),
+      url("../images/banner-bg/banner-bg-2560x676.jpg");
+  }
+
+  @media only screen and (max-width: $bp-desktop-big) {
+    grid-template-columns:
+      [full-start] minmax(5rem, 1fr)
+      [center-start] repeat(
+        20,
+        [col-start] minmax(min-content, 5.85rem) [col-end]
+      )
+      [center-end]
+      minmax(5rem, 1fr) [full-end];
+    background-image: url("../images/banner-bg/banner-bg-1204x723-min.jpg");
+    padding: 20.4rem 0 14.2rem 0;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (max-width: $bp-desktop-big) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-prime, 0.8),
+        rgba($cl-second, 0.1)
+      ),
+      url("../images/banner-bg/banner-bg-1204x723.jpg");
+  }
+
+  @media only screen and (max-width: $bp-tablet-big) {
+    background-image: url("../images/banner-bg/banner-bg-768x622-min.jpg");
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (max-width: $bp-tablet-big) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-prime, 0.8),
+        rgba($cl-second, 0.1)
+      ),
+      url("../images/banner-bg/banner-bg-768x622.jpg");
+  }
+
+  @media only screen and (max-width: $bp-tablet) {
+    grid-template-columns:
+      [full-start] minmax(2.5rem, 1fr)
+      [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 11.7rem) [col-end]
+      )
+      [center-end]
+      minmax(2.5rem, 1fr) [full-end];
+    padding: 20.5rem 0 12rem 0;
+  }
+
+  @media only screen and (max-width: $bp-phone-pre) {
+    background-image: url("../images/banner-bg/banner-bg-320x393-min.jpg");
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (max-width: $bp-phone-pre) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($cl-prime, 0.8),
+        rgba($cl-second, 0.1)
+      ),
+      url("../images/banner-bg/banner-bg-320x393.jpg");
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-2) {
+    padding: 16rem 0 8rem 0;
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-3) {
+    padding: 16rem 0 8rem 0;
+  }
+
+  @media only screen and (max-width: $bp-phone) {
+    padding: 15.8rem 0 6.9rem 0;
+  }
+
+  &__content {
+    grid-column: col-start / col-end 10;
+    display: grid;
+    grid-row-gap: 2.5rem;
+    position: relative;
+
+    @media only screen and (min-width: $bp-desktop-big) {
+      left: 1.35rem;
+    }
+
+    @media only screen and (max-width: $bp-desktop) {
+      grid-column: col-start / col-end 8;
+      left: -0.4rem;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+      width: 65%;
+    }
+
+    @media only screen and (max-width: $bp-phone-pre-2) {
+      grid-column: center-start / center-end;
+      width: 100%;
+    }
+
+    &--heading {
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 5rem;
+      line-height: 6rem;
+
+      margin-top: -0.7rem;
+      margin-bottom: 0.3rem;
+
+      @media only screen and (max-width: $bp-tablet) {
+        font-family: $font-heading;
+        font-weight: 300;
+        font-size: 4.2rem;
+        line-height: 5.1rem;
+        margin-left: 0.1rem;
+        margin-top: -2.8rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-3) {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.4rem;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        position: relative;
+        left: 0.3rem;
+        top: 0.1rem;
+      }
+    }
+
+    &--paragraph {
+      font-family: $font-regular;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+
+      color: #ffffffce;
+      margin-top: -1.05rem;
+      margin-left: 0.3rem;
+      letter-spacing: 0.088rem;
+      font-weight: 300;
+
+      @media only screen and (max-width: $bp-tablet) {
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-left: 0.4rem;
+        margin-top: -0.8rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-3) {
+        display: none;
+      }
+
+      &-mobile {
+        display: none;
+        @media only screen and (max-width: $bp-phone-pre-3) {
+          display: block;
+          text-align: center;
+        }
+
+        @media only screen and (max-width: $bp-phone) {
+          position: relative;
+          left: 0.3rem;
+          top: -1.5rem;
+        }
+      }
+    }
+
+    &--cta {
+      justify-self: start;
+      margin-top: 0.7rem;
+
+      &::-moz-focus-inner {
+        border: 0;
+      }
+
+      @media only screen and (max-width: $bp-desktop) {
+        margin-top: 1.5rem;
+        margin-bottom: 1.6rem;
+      }
+
+      @media only screen and (max-width: $bp-tablet) {
+        margin-top: 0.74rem;
+        margin-bottom: 0rem;
+      }
+
+      @media only screen and (max-width: $bp-phone-pre-2) {
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: $bp-phone) {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}

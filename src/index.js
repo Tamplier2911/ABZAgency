@@ -1,4 +1,11 @@
 import "./index.scss";
+
+// if needed IE 9+ use that
+// https://github.com/facebook/create-react-app/blob/master/packages/react-app-polyfill/README.md#react-app-polyfill
+// npm install react-app-polyfill
+// import "react-app-polyfill/ie9";
+
+// import "./sass/style.css";
 import React from "react";
 import ReactDOM from "react-dom";
 

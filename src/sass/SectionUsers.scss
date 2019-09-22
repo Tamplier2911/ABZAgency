@@ -229,9 +229,9 @@
       }
 
       @media only screen and (max-width: $bp-phone) {
-        overflow: auto;
-        text-overflow: unset;
-        white-space: unset;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
         top: -0.5rem;
       }
     }

@@ -7,6 +7,7 @@
   max-width: 256rem;
   background-color: #fff;
   z-index: 10;
+  box-shadow: 0 0.5rem 1rem #00000033;
 
   display: flex;
   justify-content: center;
@@ -171,6 +172,7 @@
     z-index: 10;
     align-items: center;
     padding: 0 2.5rem;
+    box-shadow: 0 0.5rem 1rem #00000033;
 
     &__logo {
       cursor: pointer;

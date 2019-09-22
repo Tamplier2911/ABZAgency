@@ -36,6 +36,7 @@
       )
       [center-end]
       minmax(2.5rem, 1fr) [full-end];
+    overflow-x: hidden;
   }
 
   @media only screen and (max-width: $bp-phone-pre-3) {

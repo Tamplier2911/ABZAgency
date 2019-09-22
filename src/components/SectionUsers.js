@@ -6,22 +6,22 @@ import UserFigure from "./UserFigure";
 import UsersContext from "../contexts/UsersContext";
 
 import noah from "../images/user-noah-2x.jpg";
-import noah_min from "../images/user-noah-1x.png";
+import noah_min from "../images/user-noah-1x.jpg";
 
-import adolph from "../images/user-adolph-2x.png";
-import adolph_min from "../images/user-adolph-1x.png";
+import adolph from "../images/user-adolph-2x.jpg";
+import adolph_min from "../images/user-adolph-1x.jpg";
 
 import liam from "../images/user-liam-2x.jpg";
-import liam_min from "../images/user-liam-1x.png";
+import liam_min from "../images/user-liam-1x.jpg";
 
 import eli from "../images/user-elizabeth-2x.jpg";
-import eli_min from "../images/user-elizabeth-1x.png";
+import eli_min from "../images/user-elizabeth-1x.jpg";
 
 import alex from "../images/user-alexander-2x.jpg";
-import alex_min from "../images/user-alexander-1x.png";
+import alex_min from "../images/user-alexander-1x.jpg";
 
 import mason from "../images/user-mason-2x.jpg";
-import mason_min from "../images/user-mason-1x.png";
+import mason_min from "../images/user-mason-1x.jpg";
 
 class SectionUsers extends Component {
   static contextType = UsersContext;
@@ -53,7 +53,24 @@ class SectionUsers extends Component {
     }
   };
 
+  renderMore() {
+    if (this.context.page === this.context.totalPages) {
+      // If reach last page render that
+    } else {
+      // Else render this
+      return (
+        <button
+          className="section-users__content--more btn btn-secondary"
+          onClick={this.context.onMoreClick}
+        >
+          Show more
+        </button>
+      );
+    }
+  }
+
   render() {
+    console.log(this.context);
     return (
       <section className="section-users" id="users">
         <div className="section-users__content">
@@ -132,12 +149,7 @@ class SectionUsers extends Component {
 
             {this.renderUsers()}
           </div>
-          <button
-            className="section-users__content--more btn btn-secondary"
-            onClick={this.context.onMoreClick}
-          >
-            Show more
-          </button>
+          {this.renderMore()}
         </div>
       </section>
     );

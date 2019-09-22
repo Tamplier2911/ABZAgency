@@ -11,6 +11,12 @@
   display: none;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-phone-pre-3) {
+    // display: flex;
+    width: 140vw;
+    height: 140vh;
+  }
 }
 
 .modal__body {
@@ -36,11 +42,21 @@
   @media only screen and (max-width: $bp-phone-pre-3) {
     min-width: 30rem;
     height: 30vh;
+    position: relative;
+    margin-right: 40vw;
+    margin-bottom: 40vh;
+  }
+
+  @media only screen and (max-width: $bp-phone-pre-4) {
+    margin-right: 40vw;
+    margin-bottom: 40vh;
   }
 
   @media only screen and (max-width: $bp-phone) {
     min-width: 28rem;
     height: 30vh;
+    margin-right: 40vw;
+    margin-bottom: 40vh;
   }
 }
 

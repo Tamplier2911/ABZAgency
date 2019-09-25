@@ -70,7 +70,7 @@ class SectionUsers extends Component {
   }
 
   render() {
-    console.log(this.context);
+    // console.log(this.context);
     return (
       <section className="section-users" id="users">
         <div className="section-users__content">
